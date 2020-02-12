@@ -7,8 +7,7 @@ class AddApiKey {
   constructor(serverless, options) {
     this.options = options;
     this.hooks = {
-      'after:deploy:deploy': () => helper.addApiKey(serverless, options),
-      'remove:remove': () => helper.removeApiKey(serverless, options)
+      'after:deploy:deploy': () => helper.addApiKey(serverless, options)
     };
   }
 }
